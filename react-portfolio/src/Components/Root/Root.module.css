@@ -1,0 +1,41 @@
+.container {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+.navigation {
+    background-color: black;
+    padding: 10px 0 10px 0;
+}
+.navigation a {
+    text-decoration: none;
+    color: white;
+}
+.content {
+    background-color: white;
+}
+.navLink {
+    padding: 10px;
+}
+.navLink:hover {
+    background-color: lime
+
+}
+.activeNavLink {
+    background-color:lime;
+    padding: 10px;
+}
+.footer {
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+.footer a {
+    background-color: transparent;
+    color: purple;
+}
+.footer a:hover {
+    color: red;
+}

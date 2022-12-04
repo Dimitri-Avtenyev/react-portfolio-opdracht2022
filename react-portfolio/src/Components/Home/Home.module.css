@@ -1,0 +1,20 @@
+.home {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.studentPic {
+    width: 100px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.533);
+    margin-left: 0.5rem;
+}
+.info p {
+    padding: 1rem;
+}
+.info a {
+    color: purple;
+    background-color: transparent;
+}
+.info a:hover {
+    color: red;
+}
