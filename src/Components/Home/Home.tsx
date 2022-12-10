@@ -1,18 +1,12 @@
-import studentPic from "../Home/IMG_1581.jpeg";
 import styles from "../Home/Home.module.css";
-
+import {sendTestMail} from "../Contact/EmailHandler";
+import Introduction from "./Introduction";
 const Home = () => {
 	return (
 		<div className={styles.home}>
-			<img className={styles.studentPic} src={studentPic} alt="foto student"/>
-			<div className={styles.info}>
-				<p>
-					Dimitri Avtenyev | Student <a href="https://www.ap.be" target={"_blank"}>AP Hogeschool</a>
-				</p>
-			</div>
-			<div></div>
+			<Introduction/>
 		</div>
-	)
+	);
 }
 
 export default Home;
