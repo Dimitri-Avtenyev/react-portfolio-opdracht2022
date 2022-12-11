@@ -43,7 +43,7 @@ export const loadingIndicator = () => {
 interface IPokemonDataContext {
 	pokemon: PokemonApi[]
 }
-const PokemonDataContext = React.createContext<IPokemonDataContext>({pokemon: []});
+export const PokemonDataContext = React.createContext<IPokemonDataContext>({pokemon: []});
 
 const PokemonApp = () => {
 	const [pokemon, setPokemon] = useState<Pokemon[]>([]);
@@ -74,7 +74,7 @@ const PokemonApp = () => {
 				},
 				{
 					path: "pokemon",
-					element: <PokemonPage pokemon={pokemonApi}/>,
+					element: <PokemonPage/>,
 				}, 
 				{
 					path: "pokemon/:id",

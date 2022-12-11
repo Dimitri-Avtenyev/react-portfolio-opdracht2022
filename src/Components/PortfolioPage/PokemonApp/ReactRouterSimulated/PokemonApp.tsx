@@ -59,8 +59,11 @@ const PokemonApp = () => {
 	let page = <Home/>;
 	if (currRoute === "pokemon") {
 		page = <PokemonPage/>;
-		
-	} 
+	} else if (currRoute === "home"){
+		page = <Home/>;
+	} else {
+		page = <PokemonDetail id={currRoute}/>;
+	}
 
 	useEffect(() => {
 		const loadPokemonFromApi = async () => {
@@ -104,11 +107,14 @@ const PokemonApp = () => {
 	// 		element: <PageNotFound/>
 	// 	}
 	// ]);
+
+
+	//Simulated browserpage
 	return ( 
 		<PokemonDataContext.Provider value={{pokemon: pokemonApi, currRoute, setCurrRoute}}>
-			<div>
-				<button onClick={() => setCurrRoute("home")}>Home</button>
-				<button onClick={() => setCurrRoute("pokemon")}>Pokemon</button>
+			<div> 
+				<button style={{borderRadius: "20px"}} onClick={() => setCurrRoute("home")}>Home</button>
+				<button style={{borderRadius: "20px"}} onClick={() => setCurrRoute("pokemon")}>Pokemon</button>
 					{page}
 			</div>
 		</PokemonDataContext.Provider>

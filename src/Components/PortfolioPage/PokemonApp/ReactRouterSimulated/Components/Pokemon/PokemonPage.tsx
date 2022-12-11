@@ -1,16 +1,14 @@
 import { useContext, useState } from "react";
 import styles from "./PokemonPage.module.css";
-import {Pokemon, PokemonDataContext} from "../../PokemonApp";
-import {PokemonApi} from "../../PokemonApp";
+import {PokemonDataContext} from "../../PokemonApp";
 import { Link } from "react-router-dom";
 
-interface PokemonProps {
-    pokemon: PokemonApi[]
-}
 
 const PokemonPage = () => {
     const [searchInput, setSearchInput] = useState<string>("");
-    const { pokemon } = useContext(PokemonDataContext)
+
+    const { pokemon } = useContext(PokemonDataContext);
+    const {setCurrRoute} = useContext(PokemonDataContext);
     return (
         <div>
             <div className={styles.searchBar}>
@@ -19,7 +17,8 @@ const PokemonPage = () => {
             <div className={styles.pokemonList}>
                 {pokemon.filter((p)=> p.name.startsWith(searchInput)).map((pokemon, index) => {
                         return (
-                            <Link to={`${index+1}`} className={styles.pokemon} key={index}>{pokemon.name}</Link>
+                            // <Link to={`${index+1}`} className={styles.pokemon} key={index}>{pokemon.name}</Link>
+                            <span className={styles.pokemon} key={index} onClick={()=> setCurrRoute((index+1).toString())}>{pokemon.name}</span>
                         );
                     })}
             </div>

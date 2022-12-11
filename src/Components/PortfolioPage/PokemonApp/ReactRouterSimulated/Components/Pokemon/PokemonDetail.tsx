@@ -6,9 +6,12 @@ import {Pokemon} from "../../PokemonApp";
 interface PokemonProps {
 	pokemon: PokemonApi[]
 }
-const PokemonDetail = () => {
+
+// adjusted instead of using useParams to work in "simulated router" 
+// for router app see "WithReactRouter" folder
+const PokemonDetail = ({id}:{id:string}) => {
 	const [pokemon, setPokemon] = useState<Pokemon>();
-	let {id} = useParams();
+	//let {id} = useParams();
 	//let pokemon:Pokemon | undefined;
 
 	useEffect(()=> {
@@ -30,7 +33,7 @@ const PokemonDetail = () => {
 				<p>Name: {pokemon.name}</p>
 				<p>Weight: {pokemon.weight}</p>
 				<p>Height: {pokemon.height}</p>
-				<p><img src={`${pokemon.sprites.front_default}`}/></p>
+				<p><img src={`${pokemon.sprites?.front_default}`}/></p>
 				<p><Link to="pokemon"></Link></p>
 			</div>
 		);

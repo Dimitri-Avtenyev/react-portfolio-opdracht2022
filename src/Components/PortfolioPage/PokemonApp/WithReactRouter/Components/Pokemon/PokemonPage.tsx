@@ -1,16 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./PokemonPage.module.css";
-import {Pokemon} from "../../PokemonApp";
+import {Pokemon, PokemonDataContext} from "../../PokemonApp";
 import {PokemonApi} from "../../PokemonApp";
 import { Link } from "react-router-dom";
 
-interface PokemonProps {
-    pokemon: PokemonApi[]
-}
 
-const PokemonPage = ({pokemon}: PokemonProps) => {
+
+const PokemonPage = () => {
     const [searchInput, setSearchInput] = useState<string>("");
-
+    const { pokemon } = useContext(PokemonDataContext)
     return (
         <div>
             <div className={styles.searchBar}>

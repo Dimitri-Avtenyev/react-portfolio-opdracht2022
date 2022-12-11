@@ -8,7 +8,7 @@ import DadJoke from './DadJoke/DadJoke';
 import Filtering from './FilteringAndSorting/Filtering';
 import Interval from './Interval/Interval';
 import PokedexApp from './Pokedex/PokedexApp';
-import PokemonApp from './PokemonApp/WithReactRouter/PokemonApp';
+import PokemonApp from './PokemonApp/ReactRouterSimulated/PokemonApp';
 import SlotMachine from './SlotMachine/SlotMachine';
 
 
