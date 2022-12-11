@@ -1,0 +1,18 @@
+.addList {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.error {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 0.5rem;
+}
+.success {
+    background-color: green;
+    border: 1px solid black;
+    border-radius: 10%;
+    margin-bottom: 20px;
+    padding: 0.5rem;
+}

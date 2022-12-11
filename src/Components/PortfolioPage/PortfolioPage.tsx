@@ -1,33 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import React, { useContext } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
-import ColorSelect from './ColorSelect/ColorSelect';
-import CounterList from './CounterList/CounterList';
-import DadJoke from './DadJoke/DadJoke';
-import Filtering from './FilteringAndSorting/Filtering';
-import Interval from './Interval/Interval';
-import PokedexApp from './Pokedex/PokedexApp';
-import PokemonApp from './PokemonApp/ReactRouterSimulated/PokemonApp';
-import SlotMachine from './SlotMachine/SlotMachine';
+import { ComponentsContext } from 'Components/App/ComponentsContext';
+import styles from "./PortfolioPage.module.css";
 
 
-interface Component {
-	type:	React.ReactNode,
-	name:	string
-}
 const PortfolioPage = () => {
-	let components:Component[] = [
-		{type: <Interval/>, name: "Interval"},
-		{type: <SlotMachine slots={3}/>, name: "SlotMachine"},
-		{type: <ColorSelect/>, name: "ColorSelect"},
-		{type: <Filtering/>, name: "FilteringAndSorting"},
-		{type: <CounterList/>, name: "CounterList"},
-		{type: <DadJoke/>, name: "DadJoke"},
-		{type: <PokedexApp/>, name: "Pokedex"},
-		{type: <PokemonApp/>, name: "PokemonApp"}
-	];
-
+	const { components } = useContext(ComponentsContext);
     return (
 	<div>
 		<Accordion>
@@ -35,9 +15,10 @@ const PortfolioPage = () => {
 				components.map((component, index) => {
 					return (
 						<Accordion.Item key={index} eventKey={index.toString()}>
-						<Accordion.Header>{component.name}</Accordion.Header>
-							<Accordion.Body>
+						<Accordion.Header>{`Component #${index+1}: `}<b>{component.name}</b></Accordion.Header>
+							<Accordion.Body className={styles.body}>
 								{component.type}
+								<Link to={`/portfolio/${component.name}`} className={styles.linkToStyle}>Go to component</Link>
 							</Accordion.Body>
 						</Accordion.Item>
 					);

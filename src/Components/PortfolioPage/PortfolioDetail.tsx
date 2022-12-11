@@ -1,23 +1,21 @@
 
+import { ComponentsContext } from 'Components/App/ComponentsContext';
+import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { JsxElement } from 'typescript';
 import Interval from './Interval/Interval';
 
-const PortfolioDetail = () => {
+const PortfolioDetail = () => {
     let {component} = useParams();
+    const { components } = useContext(ComponentsContext);
+
     let componentShowcase:React.ReactNode = <></>;
 
-    let foundComponent;
-    switch(component) {
-        case ("interval"):
-            componentShowcase = <Interval/>
-            break;
-        
+    let foundComponent = components.find(x => x.name === component);
+    if (foundComponent != null) {
+        componentShowcase = foundComponent.type;
     }
-    // if (component === "interval") {
-    //     componentShowcase = <Interval/>;
-    // }
-     return (
+    
+    return (
         <div>
             {componentShowcase}
         </div>

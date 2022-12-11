@@ -8,11 +8,11 @@ interface Slot {
 	slotImage: string
 }
 const slots: Slot[] = [
-	{ id: 0, slotImage: "./slot-cherry.png"},
-	{ id: 1, slotImage: "./slot-lemon.png" },
-	{ id: 2, slotImage: "./slot-melon.png" },
-	{ id: 3, slotImage: "./slot-prune.png" },
-	{ id: 4, slotImage: "./slot-seven.png" }
+	{ id: 0, slotImage: "../slot-cherry.png"},
+	{ id: 1, slotImage: "../slot-lemon.png" },
+	{ id: 2, slotImage: "../slot-melon.png" },
+	{ id: 3, slotImage: "../slot-prune.png" },
+	{ id: 4, slotImage: "../slot-seven.png" }
 ]
 const randomNum = (min: number, max: number): number => {
 	return Math.floor(Math.random() * (max + 1) + min);

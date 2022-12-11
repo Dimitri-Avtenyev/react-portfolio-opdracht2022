@@ -54,7 +54,7 @@ const PokemonApp = () => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [pokemonApi, setPokemonApi] = useState<PokemonApi[]>([]);
 
-	const [currRoute, setCurrRoute] = useState<string>("");
+	const [currRoute, setCurrRoute] = useState<string>("home");
 
 	let page = <Home/>;
 	if (currRoute === "pokemon") {
