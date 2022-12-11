@@ -1,0 +1,24 @@
+.container {
+
+    text-decoration: none;
+}
+.navigation, a {
+    background-color: rgb(94, 197, 164);
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+    color: white;
+}
+.content {
+    background-color: white;
+}
+.navLink {
+    padding: 10px;
+}
+.navLink:hover {
+    background-color: rgb(55, 126, 33);
+
+}
+.activeNavLink {
+    background-color: rgb(55, 126, 33);
+    padding: 10px;
+}

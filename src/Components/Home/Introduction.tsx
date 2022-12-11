@@ -15,8 +15,8 @@ const Introduction = () => {
                     Portfolio voor Web Frameworks 
                 </h2>
                 <p>My name is Dimitri Avtenyev. 
-                I'm a software developer student with a strong analytical mindset and technical skills. I have an aptitude as a fast learner for picking-up new programming languages and frameworks. Problem-solving skills are in my nature.
-                I find ways to improve code quality, practices things at the forefront of what modern development looks like these days. As I am always looking for ways to improve my skills. 
+                    I'm a software developer student with a strong analytical mindset and technical skills. I have an aptitude as a fast learner for picking-up new programming languages and frameworks. Problem-solving skills are in my nature.
+                    I find ways to improve code quality, practices things at the forefront of what modern development looks like these days. As I am always looking for ways to improve my skills. 
                 </p>
                 <div className={styles.skillsSection}>
                     <h2>Skills*</h2>
@@ -51,8 +51,6 @@ const Introduction = () => {
                                 <th>Bash</th>
                                 <td><ProgressBar animated now={70} /></td>
                             </tr>
-                         
-                        
                         </tbody>
                         <tfoot></tfoot>
                     </table>

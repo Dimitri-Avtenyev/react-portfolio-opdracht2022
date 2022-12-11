@@ -1,59 +1,48 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
-import CurrentTime from './Component-1/CurrentTime';
+import { Link } from 'react-router-dom';
+import ColorSelect from './ColorSelect/ColorSelect';
+import CounterList from './CounterList/CounterList';
+import DadJoke from './DadJoke/DadJoke';
+import Filtering from './FilteringAndSorting/Filtering';
+import Interval from './Interval/Interval';
+import PokedexApp from './Pokedex/PokedexApp';
+import PokemonApp from './PokemonApp/WithReactRouter/PokemonApp';
+import SlotMachine from './SlotMachine/SlotMachine';
 
+
+interface Component {
+	type:	React.ReactNode,
+	name:	string
+}
 const PortfolioPage = () => {
+	let components:Component[] = [
+		{type: <Interval/>, name: "Interval"},
+		{type: <SlotMachine slots={3}/>, name: "SlotMachine"},
+		{type: <ColorSelect/>, name: "ColorSelect"},
+		{type: <Filtering/>, name: "FilteringAndSorting"},
+		{type: <CounterList/>, name: "CounterList"},
+		{type: <DadJoke/>, name: "DadJoke"},
+		{type: <PokedexApp/>, name: "Pokedex"},
+		{type: <PokemonApp/>, name: "PokemonApp"}
+	];
+
     return (
 	<div>
 		<Accordion>
-			<Accordion.Item eventKey='0'>
-				<Accordion.Header>Component #1</Accordion.Header>
-				<Accordion.Body>
-					<CurrentTime/>
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='1'>
-				<Accordion.Header>Component #2</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='2'>
-				<Accordion.Header>Component #3</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='3'>
-				<Accordion.Header>Component #4</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='4'>
-				<Accordion.Header>Component #5</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='5'>
-				<Accordion.Header>Component #6</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='6'>
-				<Accordion.Header>Component #7</Accordion.Header>
-				<Accordion.Body>
-
-				</Accordion.Body>
-			</Accordion.Item>
-			<Accordion.Item eventKey='7'>
-				<Accordion.Header>Component #7</Accordion.Header>
-				<Accordion.Body>
-				<CurrentTime/>
-				</Accordion.Body>
-			</Accordion.Item>
+			{
+				components.map((component, index) => {
+					return (
+						<Accordion.Item key={index} eventKey={index.toString()}>
+						<Accordion.Header>{component.name}</Accordion.Header>
+							<Accordion.Body>
+								{component.type}
+							</Accordion.Body>
+						</Accordion.Item>
+					);
+				})
+			}
 		</Accordion>
 	</div>
     );

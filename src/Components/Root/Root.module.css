@@ -6,10 +6,16 @@
     min-height: 100vh;
 }
 .navigation {
+    display: flex;
+    justify-content: space-between;
     background-color: black;
     padding: 10px 0 10px 0;
 }
 .navigation a {
+    text-decoration: none;
+    color: white;
+}
+.navigation a:hover {
     text-decoration: none;
     color: white;
 }
@@ -18,14 +24,16 @@
 }
 .navLink {
     padding: 10px;
+    border-radius: 10px;
 }
 .navLink:hover {
     background-color: lime
-
 }
+
 .activeNavLink {
     background-color:lime;
     padding: 10px;
+    border-radius: 10px;
 }
 .footer {
     text-align: center;
@@ -39,3 +47,17 @@
 .footer a:hover {
     color: red;
 }
+.search {
+    margin-right: 5px;
+}
+.search button:hover {
+    background-color: lime;
+}
+.search button {
+    border-radius: 50px;
+    border: none;
+    width: 50px;
+}
+
+/*--- Media queries ---*/
+

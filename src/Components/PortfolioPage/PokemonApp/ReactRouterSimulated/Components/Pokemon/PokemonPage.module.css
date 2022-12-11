@@ -1,0 +1,27 @@
+
+.searchBar {
+    padding: 20px;
+}
+.searchBar > input{
+    border: 1px solid green;
+    border-radius: 5px;
+    width: 100%;
+}
+.pokemonList {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 15% 0 15%;
+}
+.pokemon {
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+
+}
+.pokemon:hover {
+    background-color: blue;
+}
