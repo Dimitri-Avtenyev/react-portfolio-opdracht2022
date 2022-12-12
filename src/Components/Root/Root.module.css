@@ -4,12 +4,13 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+
 }
 .navigation {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    padding: 10px 0 10px 0;
+    padding: 10px;
 }
 .navigation a {
     text-decoration: none;
@@ -27,11 +28,11 @@
     border-radius: 10px;
 }
 .navLink:hover {
-    background-color: lime
+    background-color:rgb(46, 43, 43);
 }
 
 .activeNavLink {
-    background-color:lime;
+    background-color:rgb(46, 43, 43);
     padding: 10px;
     border-radius: 10px;
 }
@@ -47,17 +48,65 @@
 .footer a:hover {
     color: red;
 }
-.search {
+.linkToStyle {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+ }
+.linkToStyle:hover {
+    background-color: rgb(46, 43, 43);
+}
+.searchAndTheme {
+    display: flex;
+    gap: 5px;
     margin-right: 5px;
+    
 }
-.search button:hover {
-    background-color: lime;
+.searchAndTheme button:hover {
+    background-color:white;
 }
-.search button {
-    border-radius: 50px;
+.searchAndTheme button {
+    border-radius: 30px;
     border: none;
-    width: 50px;
+    width: 150px;
+}
+.searchAndTheme .lightsOn  {
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    font-size: 0;
+    padding: 0;
+}
+.searchAndTheme .lightsOff  {
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    font-size: 0;
+    padding: 0;
+}
+/* -- Modal --*/
+
+.ModalHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchInput {
+    text-align: center;
+    width: 100%;
 }
 
 /*--- Media queries ---*/
-
+@media only screen and (max-width: 720px) {
+    .searchAndTheme .searchButton {
+        border-radius: 10px;
+        border: none;
+        width: 30px;
+        font-size: 0;
+        padding: 0;
+    }
+}

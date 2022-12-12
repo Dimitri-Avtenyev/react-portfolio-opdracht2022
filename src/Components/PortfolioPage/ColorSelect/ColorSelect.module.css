@@ -1,9 +1,13 @@
 .selectBox {
-    width: auto;
+    width: 100%;
 }
 .colorContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100px;
+}
+.button {
+    border-radius: 20px;
+    margin: 10px;
 }

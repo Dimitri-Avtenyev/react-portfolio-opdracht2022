@@ -1,13 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
 import { ComponentsContext } from 'Components/App/ComponentsContext';
 import styles from "./PortfolioPage.module.css";
 
 
-const PortfolioPage = () => {
+const PortfolioPage = () => {
 	const { components } = useContext(ComponentsContext);
+
     return (
 	<div>
 		<Accordion>

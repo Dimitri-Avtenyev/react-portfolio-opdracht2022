@@ -1,4 +1,3 @@
-import React, { useContext, useEffect, useState } from 'react';
 import {createBrowserRouter, RouterProvider, Route} from "react-router-dom";
 import Root from 'Components/Root/Root';
 import Home from 'Components/Home/Home';
@@ -7,7 +6,6 @@ import PortfolioPage from 'Components/PortfolioPage/PortfolioPage';
 import PortfolioDetail from 'Components/PortfolioPage/PortfolioDetail';
 import Contact from 'Components/Contact/Contact';
 import { ComponentsContext } from './ComponentsContext';
-import styles from "./PortfolioPage.module.css";
 import ColorSelect from '../PortfolioPage/ColorSelect/ColorSelect';
 import CounterList from '../PortfolioPage/CounterList/CounterList';
 import DadJoke from '../PortfolioPage/DadJoke/DadJoke';
@@ -17,8 +15,13 @@ import PokedexApp from '../PortfolioPage/Pokedex/PokedexApp';
 import PokemonApp from '../PortfolioPage/PokemonApp/ReactRouterSimulated/PokemonApp';
 import ShoppingList from '../PortfolioPage/ShoppingList/ShoppingList';
 import SlotMachine from '../PortfolioPage/SlotMachine/SlotMachine';
+import TicTacToe from '../PortfolioPage/TicTacToe/TicTacToe';
+import { ThemeContext } from './ThemeContext';
+import { useState } from "react";
 
 const App = () => {
+	const [theme, setTheme] = useState<string>("dark");
+
 	let components = [
 		{type: <Interval/>, name: "Interval"},
 		{type: <SlotMachine slots={3}/>, name: "SlotMachine"},
@@ -29,6 +32,7 @@ const App = () => {
 		{type: <PokedexApp/>, name: "Pokedex"},
 		{type: <PokemonApp/>, name: "PokemonApp"},
 		{type: <ShoppingList/>, name: "ShoppingList"},
+		{type: <TicTacToe/>, name: "TicTacToe"},
 	];
 	const router = createBrowserRouter([
 		{
@@ -59,15 +63,12 @@ const App = () => {
 		}
 	]);
 	return ( 
-		// <ThemeContext.Provider value={{dark}}>
-		<ComponentsContext.Provider value={{components: components}}>
-			<RouterProvider router={router}/>
-		</ComponentsContext.Provider>
-		
-		// </ThemeContext.Provider> 
+		<ThemeContext.Provider value={{theme: theme, setTheme: setTheme}}>
+			<ComponentsContext.Provider value={{components: components}}>
+				<RouterProvider router={router}/>
+			</ComponentsContext.Provider>
+		</ThemeContext.Provider> 
   );
 }
-
-
 
 export default App;

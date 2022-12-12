@@ -29,7 +29,7 @@ const ColorSelect = () => {
                 <option value="black">black</option>
                 <option value="white">white</option>
             </select>
-            <button style={{display: "block"}} onClick={() => {setColors([...selectedColors])}}>Show colors</button>
+            <button className={styles.button} onClick={() => {setColors([...selectedColors])}}>Show colors</button>
             
             <div className={styles.colorContainer}>
                 {colors.map((color, index:number) => (
