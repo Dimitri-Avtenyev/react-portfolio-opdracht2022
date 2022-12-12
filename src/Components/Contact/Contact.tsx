@@ -22,7 +22,7 @@ const Contact = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         //sendTestMail();
-        setConfirmationText(`Thanks ${name}! We will contact you at ${email}.`);
+        setConfirmationText(`Thanks for your message, ${name}!`);
         setFormSubmitted(true);
     };
     return (

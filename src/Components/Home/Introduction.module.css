@@ -44,8 +44,8 @@
 
 .skillsTable>tbody td{
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .skillsSection p {
     font-size: 0.5rem;

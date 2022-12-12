@@ -57,14 +57,14 @@ const SlotMachine = ({ slots }: { slots: number }) => {
 	}
 
 	return (
-		<div>
+		<div className={styles.container}>
 			{money > 0 && <div>Saldo: €{money}</div>}
 			<div className={styles.SlotMachine}>
+			<button className={styles.lever} onClick={pullLever} disabled={money <= 0}>Pull Lever</button>
 				{game.map((slot: Slot, id: number) =>
 					<img className={styles.slot} key={id} src={slot.slotImage} alt="slot" />
 				)}
 			</div>
-			<button className={styles.lever} onClick={pullLever} disabled={money <= 0}>Pull Lever</button>
 			<p className={styles.result}>
 				{money === 0 && <p>You lost!</p>}
 			</p>

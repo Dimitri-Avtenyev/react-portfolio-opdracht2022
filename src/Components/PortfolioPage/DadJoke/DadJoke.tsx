@@ -43,7 +43,7 @@ const DadJoke = () => {
             <div>
                 <h1 style={{fontSize: "bold"}}>Random joke:</h1>
                 <p>{joke}</p>
-                <div style={{display: "flex", gap: "5px"}}>
+                <div style={{display: "flex", justifyContent: "space-around", gap: "5px"}}>
                     <button style={{borderRadius: "10px"}} onClick={setAsFavorite}>Set as favorite</button>
                     <button style={{borderRadius: "10px"}} onClick={fetchJoke}>New joke</button>
                 </div>

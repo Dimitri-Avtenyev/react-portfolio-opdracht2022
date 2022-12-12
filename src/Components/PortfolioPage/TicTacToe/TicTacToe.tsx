@@ -11,7 +11,8 @@ const TicTacToe = () => {
         setBoard([...board]);
        }
     }
-    const getWinner = ():string => {
+    
+    const getWinner = () => {
         let winner:string = "";
         let winningPositions:number[][] = [
             [0,1,2],
@@ -23,36 +24,40 @@ const TicTacToe = () => {
             [0,4,8],
             [2,4,6]
         ]
-        let player1Positions:number[] = [];
-        let player2Positions:number[] = [];
+        // let player1Positions:number[] = [];
+        // let player2Positions:number[] = [];
 
-        for(let i:number = 0; i<board.length; i++) {
-            if (board[i] === "X") {
-                player1Positions.push(i);
-            } else if (board[i] === "O") {
-                player2Positions.push(i);
+        // for(let i:number = 0; i<board.length; i++) {
+        //     if (board[i] === "X") {
+        //         player1Positions.push(i);
+        //     } else if (board[i] === "O") {
+        //         player2Positions.push(i);
+        //     }
+        // }
+        // for(let i:number = 0; i<winningPositions.length; i++) {
+        //     let counterPlayer1:number = 0;
+        //     let counterPlayer2:number = 0;
+            
+        //     for(let j:number = 0; j<winningPositions[i].length; j++) {
+        //         if (winningPositions[i][j] === player1Positions[j]) {
+        //             counterPlayer1++;
+
+        //         } else if (winningPositions[i][j] === player2Positions[j]) {
+        //             counterPlayer2++;
+        //         }
+        //     }
+        //     if(counterPlayer1 === 3) {
+        //         winner = "X Wins!";
+        //     } else if (counterPlayer2 === 3) {
+        //         winner = "O Wins!";
+        //     }
+        // }
+        // return winner;
+        for (let positions of winningPositions) {
+            if (board[positions[0]] === board[positions[1]] && board[positions[1]] === board[positions[2]]) {
+              return board[positions[0]]
             }
         }
-       console.log(player1Positions);
-       
-        for(let i:number = 0; i<winningPositions.length; i++) {
-            let counterPlayer1:number = 0;
-            let counterPlayer2:number = 0;
-            for(let j:number = 0; j<winningPositions[i].length; j++) {
-                if (winningPositions[i][j] === player1Positions[j]) {
-                    counterPlayer1++;
-                } else if (winningPositions[i][j] === player2Positions[j]) {
-                    counterPlayer2++;
-                }
-            }
-            if(counterPlayer1 === 3) {
-                winner = "X Wins!";
-            } else if (counterPlayer2 === 3) {
-                winner = "O Wins!";
-            }
-        }
-        
-        return winner;
     }
 
     return (
@@ -72,7 +77,8 @@ const TicTacToe = () => {
                             </div>
                     )
                 })}
-                {getWinner() && <p> {getWinner()}</p>}
+                <button style={{borderRadius: "20px"}}onClick={() => {setBoard(["", "", "","", "", "", "", "", ""])}}>reset</button>
+                {<p> {getWinner()} Wins!</p>}
         </div>
     )
 }

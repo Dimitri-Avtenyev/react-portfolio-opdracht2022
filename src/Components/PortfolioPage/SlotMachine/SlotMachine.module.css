@@ -1,3 +1,10 @@
+.container {
+    border: 1px solid black;
+    padding: 0.25rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
 .slot {
     border: 0.1rem solid black;
     border-radius: 1rem;
@@ -5,7 +12,9 @@
     width: 70px;
     height: 70px;
     padding: 0.5rem;
-
+    border-image: linear-gradient(45deg, gold, deeppink) 1;
+    animation: huerotate 0.5s infinite linear;
+    clip-path: inset(0px round 10px);
 }
 .lever {
     border: 0.1rem solid black;
@@ -15,11 +24,20 @@
     height: 70px;
     padding: 0.5rem;
 }
+
+@keyframes huerotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
 .SlotMachine  {
-    display: block;
-    flex-direction: row;
-    overflow: auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow-x:scroll;
+    width: 100%;
 }
 .result {
     color:red;
