@@ -13,6 +13,7 @@
 .form p {
     font-style: italic;
     text-align: center;
+    font-size: 10px;
 }
 .form input {
     width: 100%;
@@ -22,8 +23,8 @@
 }
 .socials {
     width: auto;
+    margin-top: 5rem;
     margin-bottom: auto;
-    margin-top: 50%;
 }
 .socials li {
     list-style-type: none;
