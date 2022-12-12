@@ -39,7 +39,7 @@ const Root = () => {
 							</Modal.Title>
 						</Modal.Header>
 							<Modal.Body>
-								{components.filter((component => component.name.toLowerCase().startsWith(search))).map((component, index) => {
+								{components.filter((component => component.name.toLowerCase().startsWith(search.toLowerCase()))).map((component, index) => {
 									return (
 										<Link key={index} to={`/portfolio/${component.name}`} className={styles.linkToStyle} onClick={handleClose}>{component.name}</Link>
 									)
