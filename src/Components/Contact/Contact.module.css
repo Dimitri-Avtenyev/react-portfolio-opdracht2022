@@ -1,0 +1,29 @@
+.ContactContainer {
+    display: flex;
+    flex-direction: row;
+    
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.form input {
+    width: 100%;
+}
+.socials {
+    width: auto;
+}
+.socials li {
+    list-style-type: none;
+    display: inline;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20%;
+    margin: 1rem;
+}
+.socials ul {
+    padding: 0;
+    list-style-position: inside;
+}
