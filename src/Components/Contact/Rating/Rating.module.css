@@ -1,0 +1,17 @@
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rating p {
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+}
+.rating input {
+    padding: 0;
+    cursor: pointer;
+}
+.rating img {
+    width: 30px;
+}

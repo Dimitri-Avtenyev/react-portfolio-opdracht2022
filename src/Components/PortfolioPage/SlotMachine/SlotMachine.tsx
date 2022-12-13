@@ -1,18 +1,22 @@
 import { useState } from "react";
 import SlotComponent from "./Slot";
-
 import styles from "./SlotMachine.module.css";
+import slotCherry from "./Assets/slot-cherry.png";
+import slotLemon from "./Assets/slot-lemon.png";
+import slotMelon from "./Assets/slot-melon.png";
+import slotPrune from "./Assets/slot-prune.png";
+import slotSeven from "./Assets/slot-seven.png";
 
 interface Slot {
 	id: number,
 	slotImage: string
 }
 const slots: Slot[] = [
-	{ id: 0, slotImage: "../slot-cherry.png"},
-	{ id: 1, slotImage: "../slot-lemon.png" },
-	{ id: 2, slotImage: "../slot-melon.png" },
-	{ id: 3, slotImage: "../slot-prune.png" },
-	{ id: 4, slotImage: "../slot-seven.png" }
+	{ id: 0, slotImage: slotCherry },
+	{ id: 1, slotImage: slotLemon },
+	{ id: 2, slotImage: slotMelon},
+	{ id: 3, slotImage: slotPrune },
+	{ id: 4, slotImage: slotSeven }
 ]
 const randomNum = (min: number, max: number): number => {
 	return Math.floor(Math.random() * (max + 1) + min);

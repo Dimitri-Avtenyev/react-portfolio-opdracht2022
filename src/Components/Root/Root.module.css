@@ -14,7 +14,7 @@
     animation: changeColor 1s infinite linear;
     -webkit-animation: changeColor 1s infinite linear;
     animation-direction: alternate;
-    -webkit-animation-direction: alternate;;
+    -webkit-animation-direction: alternate;
 }
 .navigation a {
     text-decoration: none;
@@ -85,16 +85,9 @@
     padding: 0;
 }
 @keyframes changeColor {
-    from {color: red}
-    to {color: blue}
+    from {color: red;}
+    to {color: blue;}
 }
-@-webkit-keyframes changeColor {
-    from {color: red}
-    to {color: blue}
-}
-@-moz-keyframes changeColor {
-    from {color: red}
-    to {color: blue}
-}
+
 
 

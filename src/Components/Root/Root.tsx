@@ -31,7 +31,7 @@ const Root = () => {
 				<Outlet/>
 			</div>
 			<div className={styles.footer}>
-				<p>&copy;2022 | Portfolio | Door Dimitri Avtenyev in opdracht van <a href="https://www.ap.be">AP Hogeschool</a> </p>
+				<p>&copy;2022 | Portfolio | Dimitri Avtenyev<br></br>in opdracht van <a href="https://www.ap.be">AP Hogeschool</a> </p>
 			</div>
 		</div>
 	);

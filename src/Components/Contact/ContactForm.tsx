@@ -4,13 +4,13 @@ import Form from 'react-bootstrap/Form';
 import styles from './ContactForm.module.css';
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
+import Rating from './Rating/Rating';
 
 const Contact = () => {
     const [name, setName] = useState<string>("");
     const [email, setEmail] = useState<string>("");
     const [confirmationText, setConfirmationText] = useState<string>("");
     const [message, setMessage] = useState<string>("");
-    const [rating, setRating] = useState<string>("no rating yet");
     const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
 
     const sendMail =  async () => {
@@ -58,13 +58,11 @@ const Contact = () => {
                         />
                     </FloatingLabel>
                     <FloatingLabel controlId="floatingTextArea" label="Leave a message!">
-                        <Form.Control as="textarea" placeholder="Leave a comment here" name="message"
+                        <Form.Control className={styles.textarea} as="textarea" placeholder="Leave a comment here" name="message"
                         onChange={(e) => {setMessage(e.target.value)}} value={message}
                         />
                     </FloatingLabel>
-                    <p>Leave a rating:)!</p>
-                    {rating}
-                    <input type="range" min="0" max="20" step="1"  onChange={(e) => {setRating(e.target.value)}} name="rating"/>
+                        <Rating/>
                     <Button variant="primary" type="submit" disabled={checkInputEmpty()}>
                         Submit
                     </Button>
