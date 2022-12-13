@@ -9,5 +9,17 @@
    border: 3px solid black;
    border-radius: 5px;
    padding: 5px;
-
+}
+.accorHeaderContents {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+}
+.accorHeaderContents p {
+   text-align: center;
+}
+.accorHeaderContents p:last-child {
+   font-size: 10px;
 }

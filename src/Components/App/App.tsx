@@ -23,16 +23,16 @@ const App = () => {
 	const [theme, setTheme] = useState<string>("dark");
 
 	let components = [
-		{type: <Interval/>, name: "Interval"},
-		{type: <SlotMachine slots={3}/>, name: "SlotMachine"},
-		{type: <ColorSelect/>, name: "ColorSelect"},
-		{type: <Filtering/>, name: "FilteringAndSorting"},
-		{type: <CounterList/>, name: "CounterList"},
-		{type: <DadJoke/>, name: "DadJoke"},
-		{type: <PokedexApp/>, name: "Pokedex"},
-		{type: <PokemonApp/>, name: "PokemonApp"},
-		{type: <ShoppingList/>, name: "ShoppingList"},
-		{type: <TicTacToe/>, name: "TicTacToe"},
+		{type: <Interval/>, name: "Interval", description: "A simple interval with random generator that uses React Hooks and TypeScript"},
+		{type: <SlotMachine slots={3}/>, name: "SlotMachine", description: "A simple Slot Machine game that uses React Hooks and TypeScript"},
+		{type: <ColorSelect/>, name: "ColorSelect", description: "A simple Color selector that uses React Hooks and TypeScript"},
+		{type: <Filtering/>, name: "FilteringAndSorting", description: "A simple Filtering and sorting demo that uses React Hooks and TypeScript"},
+		{type: <CounterList/>, name: "CounterList", description: "A simple Counter list that uses React Hooks and TypeScript"},
+		{type: <DadJoke/>, name: "DadJoke", description: "A simple Dad joke api fetcher that uses React Hooks, local storage and TypeScript"},
+		{type: <PokedexApp/>, name: "Pokedex", description: "A simple Pokedex api fetcher that uses React Hooks and TypeScript"},
+		{type: <PokemonApp/>, name: "PokemonApp", description: "A simple Pokemon app simulated without React Router (check github for ReactRouter version) that uses React Hooks and TypeScript"},
+		{type: <ShoppingList/>, name: "ShoppingList", description: "A simple shopping list that uses React Hooks and TypeScript"},
+		{type: <TicTacToe/>, name: "TicTacToe", description: "A simple Tictactoe game that uses React Hooks and TypeScript"},
 	];
 	const router = createBrowserRouter([
 		{

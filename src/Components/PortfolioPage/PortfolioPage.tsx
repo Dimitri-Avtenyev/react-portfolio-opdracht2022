@@ -16,11 +16,15 @@ const PortfolioPage = () => {
 				components.map((component, index) => {
 					return (
 						<Accordion.Item key={index} eventKey={index.toString()}>
-						<Accordion.Header>{`Component #${index+1}: `}<b>{component.name}</b></Accordion.Header>
-							<Accordion.Body className={styles.body}>
-								{component.type}
-								<Link to={`/portfolio/${component.name}`} className={styles.linkToStyle}>Go to component</Link>
-							</Accordion.Body>
+						<Accordion.Header className={styles.accorHeader}>
+							<div className={styles.accorHeaderContents}>
+								<p>{component.name}</p><p>{component.description}</p>
+							</div>
+						</Accordion.Header>
+						<Accordion.Body className={styles.body}>
+							{component.type}
+							<Link to={`/portfolio/${component.name}`} className={styles.linkToStyle}>Go to component</Link>
+						</Accordion.Body>
 						</Accordion.Item>
 					);
 				})

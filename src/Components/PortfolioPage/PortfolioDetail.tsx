@@ -2,7 +2,6 @@
 import { ComponentsContext } from 'Components/App/ComponentsContext';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Interval from './Interval/Interval';
 
 const PortfolioDetail = () => {
     let {component} = useParams();
