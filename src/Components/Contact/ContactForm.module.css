@@ -20,6 +20,9 @@
     width: 100%;
     padding: 1rem;
 }
+.input {
+    color: black;
+}
 .form button {
     width: 100%;
 }

@@ -9,7 +9,7 @@ export const ThemeContext = React.createContext<IThemeContext>({theme: "dark", s
 export const switchTheme = (theme: string) => {
     return { 
         backgroundColor: theme === "dark" ? "black" : "white",
-        color: theme === "dark" ? "white" : "black", 
+        color: theme === "dark" ? "white" : "black"
     }
 }
 export const switchThemeTextColor = (theme:string) => {

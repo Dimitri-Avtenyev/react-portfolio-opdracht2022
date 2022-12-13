@@ -10,8 +10,18 @@
     border: 1px solid black;
     border-radius: 20%;
     margin: 1rem;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.socials img:hover {
+    transform: translateY(-3px);
+    -webkit-transform: translateY((-3px));
+
 }
 .socials ul {
     padding: 0;
     list-style-position: inside;
+}
+.socials ul li:first-child img {
+    filter: invert(100%);
 }

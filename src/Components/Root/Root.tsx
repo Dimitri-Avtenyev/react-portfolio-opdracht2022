@@ -28,8 +28,7 @@ const Root = () => {
 					<Search/>
 				</div>
 			</div>
-
-			<div className={styles.content}>
+			<div style={switchTheme(theme)} className={styles.content}>
 				<Outlet/>
 			</div>
 			<div className={styles.footer}>
