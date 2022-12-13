@@ -19,11 +19,25 @@
 }
 .accorHeaderContents p {
    text-align: center;
-   font-size: 3vw;
+   font-size: 5vw;
 }
 .accorHeaderContents p:first-child {
    font-weight: 700;
 }
 .accorHeaderContents p:last-child {
-   font-size: 2vw;
+   font-size: 3vw;
 }
+
+@media only screen and (min-width: 720px) {
+   .accorHeaderContents p {
+      text-align: center;
+      font-size: 3vw;
+   }
+   .accorHeaderContents p:first-child {
+      font-weight: 700;
+   }
+   .accorHeaderContents p:last-child {
+      font-size: 2vw;
+   }
+}
+   
