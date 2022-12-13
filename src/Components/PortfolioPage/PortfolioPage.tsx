@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useContext, useEffect } from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
-import { ComponentsContext } from 'Components/App/ComponentsContext';
+import { ComponentsContext } from 'Components/App/Context/ComponentsContext';
 import styles from "./PortfolioPage.module.css";
 
 

@@ -5,7 +5,7 @@ import PageNotFound from 'Components/PageNotFound/PageNotFound';
 import PortfolioPage from 'Components/PortfolioPage/PortfolioPage';
 import PortfolioDetail from 'Components/PortfolioPage/PortfolioDetail';
 import Contact from 'Components/Contact/Contact';
-import { ComponentsContext } from './ComponentsContext';
+import { ComponentsContext } from './Context/ComponentsContext';
 import ColorSelect from '../PortfolioPage/ColorSelect/ColorSelect';
 import CounterList from '../PortfolioPage/CounterList/CounterList';
 import DadJoke from '../PortfolioPage/DadJoke/DadJoke';
@@ -16,7 +16,7 @@ import PokemonApp from '../PortfolioPage/PokemonApp/ReactRouterSimulated/Pokemon
 import ShoppingList from '../PortfolioPage/ShoppingList/ShoppingList';
 import SlotMachine from '../PortfolioPage/SlotMachine/SlotMachine';
 import TicTacToe from '../PortfolioPage/TicTacToe/TicTacToe';
-import { ThemeContext } from './ThemeContext';
+import { ThemeContext } from './Context/ThemeContext';
 import { useState } from "react";
 
 const App = () => {

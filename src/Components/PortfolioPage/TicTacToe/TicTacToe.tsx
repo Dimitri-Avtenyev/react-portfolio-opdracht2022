@@ -13,7 +13,7 @@ const TicTacToe = () => {
     }
     
     const getWinner = () => {
-        let winner:string = "";
+        // let winner:string = "";
         let winningPositions:number[][] = [
             [0,1,2],
             [3,4,5], 
@@ -77,8 +77,11 @@ const TicTacToe = () => {
                             </div>
                     )
                 })}
-                <button style={{borderRadius: "20px"}}onClick={() => {setBoard(["", "", "","", "", "", "", "", ""])}}>reset</button>
-                {<p> {getWinner()} Wins!</p>}
+                
+                <p>Winner: {getWinner()}</p>
+                <div>
+                    <button style={{borderRadius: "20px"}} onClick={() => {setBoard(["", "", "","", "", "", "", "", ""])}}>reset</button>
+                </div>
         </div>
     )
 }

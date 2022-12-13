@@ -20,6 +20,9 @@
 .accorHeaderContents p {
    text-align: center;
 }
+.accorHeaderContents p:first-child {
+   font-weight: 700;
+}
 .accorHeaderContents p:last-child {
    font-size: 10px;
 }
