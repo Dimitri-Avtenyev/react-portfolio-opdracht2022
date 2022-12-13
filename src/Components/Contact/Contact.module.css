@@ -4,37 +4,3 @@
     justify-content: space-around;
     align-items: center;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-.form p {
-    font-style: italic;
-    text-align: center;
-    font-size: 10px;
-}
-.form input {
-    width: 100%;
-}
-.form button {
-    width: 100%;
-}
-.socials {
-    width: auto;
-    margin-top: 5rem;
-    margin-bottom: auto;
-}
-.socials li {
-    list-style-type: none;
-    display: inline;
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 20%;
-    margin: 1rem;
-}
-.socials ul {
-    padding: 0;
-    list-style-position: inside;
-}
