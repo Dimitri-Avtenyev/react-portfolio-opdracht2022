@@ -19,10 +19,11 @@
 }
 .accorHeaderContents p {
    text-align: center;
+   font-size: 3vw;
 }
 .accorHeaderContents p:first-child {
    font-weight: 700;
 }
 .accorHeaderContents p:last-child {
-   font-size: 10px;
+   font-size: 2vw;
 }

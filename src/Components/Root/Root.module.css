@@ -12,7 +12,9 @@
     padding: 10px;
     border-bottom: 2px solid;
     animation: changeColor 1s infinite linear;
+    -webkit-animation: changeColor 1s infinite linear;
     animation-direction: alternate;
+    -webkit-animation-direction: alternate;;
 }
 .navigation a {
     text-decoration: none;
@@ -56,16 +58,17 @@
     gap: 5px;
     margin-right: 5px;
 }
-.searchAndTheme button{
+.searchAndTheme button {
     display: flex;
 }
-
-
 .searchAndTheme button:hover {
     background-color:white;
 }
-
-.searchAndTheme .lightsOn  {
+.searchAndTheme img {
+    width: 30px;
+    height: 30px;
+}
+.searchAndTheme .lightsOn {
     border-radius: 10px;
     border: 0;
     width: 30px;
@@ -73,7 +76,7 @@
     font-size: 0;
     padding: 0;
 }
-.searchAndTheme .lightsOff  {
+.searchAndTheme .lightsOff {
     border-radius: 10px;
     border: 0;
     width: 30px;
@@ -82,6 +85,14 @@
     padding: 0;
 }
 @keyframes changeColor {
+    from {color: red}
+    to {color: blue}
+}
+@-webkit-keyframes changeColor {
+    from {color: red}
+    to {color: blue}
+}
+@-moz-keyframes changeColor {
     from {color: red}
     to {color: blue}
 }

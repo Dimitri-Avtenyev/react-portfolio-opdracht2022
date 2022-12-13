@@ -11,7 +11,7 @@ const PortfolioPage = () => {
 
     return (
 	<div>
-		<Accordion>
+		<Accordion flush>
 			{
 				components.map((component, index) => {
 					return (

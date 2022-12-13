@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import styles from "./Root.module.css"
 import lightsOff from "./Icons/lightOff.svg";
 import lightsOn from "./Icons/lightOn.svg";
@@ -6,15 +6,8 @@ import { useState } from "react";
 import Search from "./Search/Search";
 
 const Root = () => {
-	// let { components } = useContext(ComponentsContext);
 	const [theme, setTheme] = useState<string>("dark");
-	// const [search, setSearch] = useState<string>("");
 
-	// state + handle Modal
-	// const [show, setShow] = useState(false);
-	// const handleClose = () => setShow(false);
-	// const handleShow = () => setShow(true);
-	// 
 	return (
 		<div className={styles.container}>
 			<div className={styles.navigation}>
