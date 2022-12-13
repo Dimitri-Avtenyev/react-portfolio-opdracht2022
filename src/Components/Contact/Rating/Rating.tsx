@@ -8,21 +8,20 @@ import smileyVeryHappy from "./Icons/smileyVeryHappy.svg";
 import smileyItriedSoHard from "./Icons/smileyItriedSoHard.svg"
 const Rating = () => {
     const [rating, setRating] = useState<string>("Rate my work");
-    const [smiley, setSmiley] = useState();
 
     const changeSmiley = () => {
         if (parseInt(rating) < 9 ) {
-            return  <img src={smileySad}/>
+            return  <img src={smileySad} alt="sad smiley"/>
         } else if (parseInt(rating) < 10) {
-            return <img src={smileyShocked}/>
+            return <img src={smileyShocked } alt="schocked smiley"/>
         } else if (parseInt(rating) < 12) {
-            return <img src={smileyDissapointed}/>
+            return <img src={smileyDissapointed} alt="dissapointed smiley"/>
         } else if (parseInt(rating) < 14) {
-            return <img src={smileyItriedSoHard}/>
+            return <img src={smileyItriedSoHard} alt="'I tried so hard' smiley"/>
         } else if (parseInt(rating) < 16) {
-            return <img src={smileyHappy}/>
+            return <img src={smileyHappy} alt="happy smiley"/>
         } else if (parseInt(rating) >= 16) {
-            return <img src={smileyVeryHappy}/>
+            return <img src={smileyVeryHappy} alt="very happy smiley"/>
         }
     }
     

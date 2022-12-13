@@ -1,11 +1,14 @@
 import styles from "./Introduction.module.css";
 import studentPic from "../Home/IMG_1581.jpeg";
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { useContext } from "react";
+import { ThemeContext, switchTheme } from "Components/App/Context/ThemeContext";
 
 const Introduction = () => {
+    const {theme, setTheme} = useContext(ThemeContext);
 
     return (
-        <div className={styles.main}>
+        <div style={switchTheme(theme)} className={styles.main}>
             <img className={styles.studentPic} src={studentPic} alt="foto student"/>
 			<div className={styles.info}>
                 <h1>

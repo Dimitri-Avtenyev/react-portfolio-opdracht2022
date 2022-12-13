@@ -2,9 +2,10 @@ import Button from 'react-bootstrap/Button';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import styles from './ContactForm.module.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import Rating from './Rating/Rating';
+import { switchTheme, ThemeContext } from 'Components/App/Context/ThemeContext';
 
 const Contact = () => {
     const [name, setName] = useState<string>("");
@@ -12,9 +13,9 @@ const Contact = () => {
     const [confirmationText, setConfirmationText] = useState<string>("");
     const [message, setMessage] = useState<string>("");
     const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
+    const {theme, setTheme} = useContext(ThemeContext);
 
     const sendMail =  async () => {
-
         emailjs.sendForm("service_5ksrtaa","template_lg68yk7", "#formContact", "LWQd_EkVwMWBSOJNQ")
         .then((response) => {
            console.log('SUCCESS!', response.status, response.text);
@@ -41,7 +42,7 @@ const Contact = () => {
         setMessage("");
     };
     return (
-        <div className={styles.ContactContainer}>
+        <div style={switchTheme(theme)} className={styles.ContactContainer}>
             <div className={styles.form}>
                 <div>
                     <h1>Let's get in touch!</h1>
@@ -70,8 +71,7 @@ const Contact = () => {
                 <div>
                     <p>{formSubmitted ? confirmationText : ""}</p>
                 </div>
-            </div>
-              
+            </div> 
         </div>
     )
 }

@@ -1,6 +1,9 @@
+import { switchTheme, ThemeContext } from 'Components/App/Context/ThemeContext';
+import { useContext } from 'react';
 import styles from './Socials.module.css';
 
 const Socials = () => {
+    const {theme, setTheme} = useContext(ThemeContext);
     return (
         <div className={styles.socials}>
             <ul>

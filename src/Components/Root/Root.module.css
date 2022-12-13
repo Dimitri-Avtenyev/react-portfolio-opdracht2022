@@ -15,6 +15,10 @@
     -webkit-animation: changeColor 1s infinite linear;
     animation-direction: alternate;
     -webkit-animation-direction: alternate;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 3;
 }
 .navigation a {
     text-decoration: none;
@@ -44,6 +48,7 @@
     text-align: center;
     color: white;
     background-color: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.23);
 }
 .footer a {
     background-color: transparent;
@@ -75,6 +80,8 @@
     height: 30px;
     font-size: 0;
     padding: 0;
+    background-color: rgba(255, 255, 255, 0.23);
+    filter: invert(100);
 }
 .searchAndTheme .lightsOff {
     border-radius: 10px;
@@ -83,6 +90,7 @@
     height: 30px;
     font-size: 0;
     padding: 0;
+    background-color: rgba(255, 255, 255, 0.23);
 }
 @keyframes changeColor {
     from {color: red;}
