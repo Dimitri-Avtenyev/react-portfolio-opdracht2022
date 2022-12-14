@@ -16,7 +16,6 @@
 .socials img:hover {
     transform: translateY(-3px);
     -webkit-transform: translateY((-3px));
-
 }
 .socials ul {
     padding: 0;

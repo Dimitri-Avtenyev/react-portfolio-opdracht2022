@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { ThemeContext } from "Components/App/Context/ThemeContext";
+import { useContext, useState } from "react";
 
 const TicTacToe = () => {
     const [board, setBoard] = useState<string[]>(["", "", "","", "", "", "", "", ""]);
     const [player, setPlayer] = useState<string>("X");
+    const {theme, setTheme} = useContext(ThemeContext);
 
     const placeElement = (index:number) => {
        if (board[index] === "") {
@@ -11,7 +13,9 @@ const TicTacToe = () => {
         setBoard([...board]);
        }
     }
-    
+    const changeBorderColor = () => {
+        
+    }
     const getWinner = () => {
         // let winner:string = "";
         let winningPositions:number[][] = [

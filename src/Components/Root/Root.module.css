@@ -22,15 +22,13 @@
 }
 .navigation a {
     text-decoration: none;
-    color: white;
+   
 }
 .navigation a:hover {
     text-decoration: none;
     color: white;
 }
-.content {
-    background-color: white;
-}
+
 .navLink {
     padding: 10px;
     border-radius: 10px;
@@ -44,11 +42,19 @@
     padding: 10px;
     border-radius: 10px;
 }
+
 .footer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     color: white;
     background-color: black;
     border-top: 1px solid rgba(255, 255, 255, 0.23);
+    padding: 0.5rem;
+    border-top: 1px solid rgba(129, 129, 129, 0.5);
+}
+.footer p {
+    margin: 0;
 }
 .footer a {
     background-color: transparent;
@@ -65,9 +71,6 @@
 }
 .searchAndTheme button {
     display: flex;
-}
-.searchAndTheme button:hover {
-    background-color:white;
 }
 .searchAndTheme img {
     width: 30px;

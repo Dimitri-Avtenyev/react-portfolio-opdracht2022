@@ -14,4 +14,5 @@
 }
 .rating img {
     width: 30px;
+    filter: reverse(100%);
 }

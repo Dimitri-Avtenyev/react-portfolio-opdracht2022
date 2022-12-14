@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom';
 import { ComponentsContext } from 'Components/App/Context/ComponentsContext';
 import styles from "./PortfolioPage.module.css";
-import { switchTheme, switchThemeTextColor, ThemeContext } from 'Components/App/Context/ThemeContext';
+import { switchTheme, ThemeContext } from 'Components/App/Context/ThemeContext';
 
 
 const PortfolioPage = () => {

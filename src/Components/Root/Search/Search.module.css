@@ -12,18 +12,21 @@
 
 /* -- Modal --*/
 
-.ModalHeader {
+.modalHeader {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.modalBody {
+    background-color: rgb(192, 192, 192);
+}
 .searchInput {
     text-align: center;
     width: 100%;
     border-radius: 10px;
     height: 100%;
+    background-color: rgb(228, 227, 227);
 }
 .linkToStyle {
     text-decoration: none;

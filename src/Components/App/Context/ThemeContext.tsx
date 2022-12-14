@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 
 interface IThemeContext {
     theme:      string,
@@ -8,12 +8,7 @@ export const ThemeContext = React.createContext<IThemeContext>({theme: "dark", s
 
 export const switchTheme = (theme: string) => {
     return { 
-        backgroundColor: theme === "dark" ? "black" : "white",
-        color: theme === "dark" ? "white" : "black"
-    }
-}
-export const switchThemeTextColor = (theme:string) => {
-    return {
+        backgroundColor: theme === "dark" ? "rgb(18, 18, 18)" : "white",
         color: theme === "dark" ? "white" : "black"
     }
 }

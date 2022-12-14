@@ -6,7 +6,6 @@ import styles from './PortfolioPageDetail.module.css';
 const PortfolioDetail = () => {
     let {component} = useParams();
     const { components } = useContext(ComponentsContext);
-
     let componentShowcase:React.ReactNode = <></>;
     let componentShowcaseName:string = "";
 
