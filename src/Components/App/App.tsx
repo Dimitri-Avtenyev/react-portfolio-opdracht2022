@@ -5,15 +5,15 @@ import PageNotFound from 'Components/PageNotFound/PageNotFound';
 import PortfolioPage from 'Components/Portfolio/PortfolioPage';
 import PortfolioDetail from 'Components/Portfolio/PortfolioDetail';
 import Contact from 'Components/Contact/Contact';
-import { ComponentsContext } from './Context/ComponentsContext';
+import { ComponentsContext, IComponent } from './Context/ComponentsContext';
 import { ThemeContext } from './Context/ThemeContext';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import ComponentList from "Components/Portfolio/ComponentList/ComponentList";
 
 const App = () => {
 	const [theme, setTheme] = useState<string>("dark");
-	let components = ComponentList();
+	let components:IComponent[] = ComponentList();
 
 	const router = createBrowserRouter([
 		{

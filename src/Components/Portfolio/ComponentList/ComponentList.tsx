@@ -1,3 +1,4 @@
+import { IComponent } from "Components/App/Context/ComponentsContext";
 import ColorSelect from "../ColorSelect/ColorSelect";
 import CounterList from "../CounterList/CounterList";
 import DadJoke from "../DadJoke/DadJoke";
@@ -8,12 +9,6 @@ import PokemonApp from "../PokemonApp/ReactRouterSimulated/PokemonApp";
 import ShoppingList from "../ShoppingList/ShoppingList";
 import SlotMachine from "../SlotMachine/SlotMachine";
 import TicTacToe from "../TicTacToe/TicTacToe";
-
-interface IComponent {
-    type:       JSX.Element,
-    name:       string,
-    description: string
-}
 
 const ComponentList = ():IComponent[] => {
 	let components:IComponent[] = [
