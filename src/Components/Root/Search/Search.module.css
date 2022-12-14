@@ -42,7 +42,8 @@
 }
 
 /*--- Media queries ---*/
-@media only screen and (max-width: 720px) {
+
+/* @media only screen and (max-width: 720px) {
     .searchButton {
         border-radius: 10px;
         border: 0;
@@ -51,4 +52,4 @@
         padding: 0;
     }
 
-}
+} */

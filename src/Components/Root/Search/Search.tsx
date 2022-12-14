@@ -16,7 +16,7 @@ const Search = () => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.searchButton} onClick={() => handleShow()}><img src={searchIcon} alt="searchIcon" />Search...</button>
+            <button className={styles.searchButton} onClick={() => handleShow()}><img src={searchIcon} alt="searchIcon" /></button>
             <Modal 
                 show={show} onHide={handleClose} size={"sm"}
                 scrollable={true}

@@ -43,7 +43,7 @@ const Root = () => {
 			</div>
 			<div style={switchTheme(theme)} className={styles.footer}>
 				<p>&copy;2022 | Portfolio | Dimitri Avtenyev</p>
-				<p>in opdracht van <a href="https://www.ap.be">AP Hogeschool</a> </p>
+				<p>in opdracht van <a href="https://www.ap.be" target="_blank">AP Hogeschool</a> </p>
 			</div>
 		</div>
 	);
