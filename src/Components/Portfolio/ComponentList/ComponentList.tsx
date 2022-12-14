@@ -1,13 +1,13 @@
-import ColorSelect from "../Portfolio/ColorSelect/ColorSelect";
-import CounterList from "../Portfolio/CounterList/CounterList";
-import DadJoke from "../Portfolio/DadJoke/DadJoke";
-import Filtering from "../Portfolio/FilteringAndSorting/Filtering";
-import Interval from "../Portfolio/Interval/Interval";
-import PokedexApp from "../Portfolio/Pokedex/PokedexApp";
-import PokemonApp from "../Portfolio/PokemonApp/ReactRouterSimulated/PokemonApp";
-import ShoppingList from "../Portfolio/ShoppingList/ShoppingList";
-import SlotMachine from "../Portfolio/SlotMachine/SlotMachine";
-import TicTacToe from "../Portfolio/TicTacToe/TicTacToe";
+import ColorSelect from "../ColorSelect/ColorSelect";
+import CounterList from "../CounterList/CounterList";
+import DadJoke from "../DadJoke/DadJoke";
+import Filtering from "../FilteringAndSorting/Filtering";
+import Interval from "../Interval/Interval";
+import PokedexApp from "../Pokedex/PokedexApp";
+import PokemonApp from "../PokemonApp/ReactRouterSimulated/PokemonApp";
+import ShoppingList from "../ShoppingList/ShoppingList";
+import SlotMachine from "../SlotMachine/SlotMachine";
+import TicTacToe from "../TicTacToe/TicTacToe";
 
 interface IComponent {
     type:       JSX.Element,

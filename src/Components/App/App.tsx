@@ -9,7 +9,7 @@ import { ComponentsContext } from './Context/ComponentsContext';
 import { ThemeContext } from './Context/ThemeContext';
 import { useState } from "react";
 
-import ComponentList from "Components/App/ComponentList";
+import ComponentList from "Components/Portfolio/ComponentList/ComponentList";
 
 const App = () => {
 	const [theme, setTheme] = useState<string>("dark");
