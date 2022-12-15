@@ -7,36 +7,65 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 10px;
+ 
+    margin: 5px;
 }
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 2vw;
+    gap: 50px;
+
 }
 .container h1, h2{
     text-align: center;
     margin: 0;
 }
 .container h1 {
-    font-size: 1rem;
+    font-size: 3vw;
 }
 .container h2 {
-    font-size: 0.5rem;
+    font-size: 2vw;
 }
 .container .description {
     font-size: 2vw;
-}   
+    text-transform: capitalize;
+}  
+
 .priceContainer {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    font-size: 3vw;
+}
+.priceStock {
+    font-weight: 600;
 }
 .priceChange {
     display: flex;
     flex-direction: column;
+    font-size: 2vw;
+}
+.positiveValue {
+    color: green;
+}
+.negativeValue {
+    color: red
 }
 .container p {
     margin: 0;
     padding: 0;
+}
+.containerPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.containerPlaceholderHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

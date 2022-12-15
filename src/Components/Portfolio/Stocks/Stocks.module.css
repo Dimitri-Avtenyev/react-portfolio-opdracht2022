@@ -1,0 +1,15 @@
+.container {
+
+}
+.container input, button {
+    width: 100%;
+    text-align: center;
+}
+.container input {
+    border-radius: 10px 10px 0 0 ;
+}
+.container button {
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+ 
+}
