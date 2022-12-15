@@ -1,11 +1,11 @@
 import React from "react";
 
 export interface IComponent {
-	type:			JSX.Element,
-	name:			string,
-	description?:	string
+	readonly type:			JSX.Element,
+	readonly name:			string,
+	readonly description?:	string
 }
 export interface IComponentContext {
-   components: IComponent[]
+   readonly components: IComponent[]
 }
 export let ComponentsContext = React.createContext<IComponentContext>({components:[]});

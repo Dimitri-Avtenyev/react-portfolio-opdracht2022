@@ -9,17 +9,6 @@ import { switchTheme, ThemeContext } from "Components/App/Context/ThemeContext";
 const Root = () => {
 	const {theme, setTheme} = useContext(ThemeContext);
 	
-	const changeTheme = (theme:string) => {
-		setTheme(theme);
-		localStorage.setItem("theme", theme);
-	}
-	useEffect(() => {
-		let themeLocal = localStorage.getItem("theme");
-		if (themeLocal) {
-			setTheme(themeLocal);
-		} 
-	},[]);
-
 	return (
 		<div className={styles.container}>
 			<div style={switchTheme(theme)} className={styles.navigation}>
@@ -31,8 +20,8 @@ const Root = () => {
 				<div className={styles.searchAndTheme}>
 					<div>
 					{theme === "light" ?
-						<button className={styles.lightsOff} onClick={() => changeTheme("dark")}><img src={lightsOff} alt="searchIcon" /></button> :
-						<button className={styles.lightsOn} onClick={() => changeTheme("light")}><img src={lightsOn} alt="searchIcon" /></button>
+						<button className={styles.lightsOff} onClick={() => setTheme("dark")}><img src={lightsOff} alt="searchIcon" /></button> :
+						<button className={styles.lightsOn} onClick={() => setTheme("light")}><img src={lightsOn} alt="searchIcon" /></button>
 					}
 					</div>
 					<Search/>

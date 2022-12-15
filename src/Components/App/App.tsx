@@ -12,8 +12,12 @@ import { useEffect, useState } from "react";
 import ComponentList from "Components/Portfolio/ComponentList/ComponentList";
 
 const App = () => {
-	const [theme, setTheme] = useState<string>("dark");
+	const [theme, setTheme] = useState<string>(localStorage.getItem("theme") ?? "dark");
 	let components:IComponent[] = ComponentList();
+
+	useEffect(() => {
+		localStorage.setItem("theme", theme);
+	},[theme]);
 
 	const router = createBrowserRouter([
 		{
