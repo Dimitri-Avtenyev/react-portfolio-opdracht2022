@@ -34,12 +34,13 @@ const App = () => {
 				}, 
 				{
 					path: "portfolio/:component",
-					element: <PortfolioDetail/>
+					element: <PortfolioDetail/>,
+					errorElement: <PageNotFound/>
 				},
 				{
 					path: "contact",
 					element: <Contact/>
-				},
+				}
 			]
 		},
 		{

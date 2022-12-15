@@ -8,10 +8,12 @@ import PokedexApp from "../Pokedex/PokedexApp";
 import PokemonApp from "../PokemonApp/ReactRouterSimulated/PokemonApp";
 import ShoppingList from "../ShoppingList/ShoppingList";
 import SlotMachine from "../SlotMachine/SlotMachine";
+import Stocks from "../Stocks/Stocks";
 import TicTacToe from "../TicTacToe/TicTacToe";
 
 const ComponentList = ():IComponent[] => {
 	let components:IComponent[] = [
+		{type: <Stocks/>, name: "Stocks", description: "A simple stock-fetcher that uses React Hooks and Typescript"},
 		{type: <Interval/>, name: "Interval", description: "A simple interval with random generator that uses React Hooks and TypeScript"},
 		{type: <SlotMachine slots={3}/>, name: "SlotMachine", description: "A simple Slot Machine game that uses React Hooks and TypeScript"},
 		{type: <ColorSelect/>, name: "ColorSelect", description: "A simple Color selector that uses React Hooks and TypeScript"},

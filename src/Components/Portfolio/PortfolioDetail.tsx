@@ -1,4 +1,5 @@
 import { ComponentsContext } from 'Components/App/Context/ComponentsContext';
+import PageNotFound from 'Components/PageNotFound/PageNotFound';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './PortfolioPageDetail.module.css';
@@ -13,6 +14,12 @@ const PortfolioDetail = () => {
     if (foundComponent != null) {
         componentShowcase = foundComponent.type;
         componentShowcaseName = foundComponent.name;
+    } else {
+        componentShowcase = 
+            <div>
+                <p>Input params:<strong> {component}</strong></p>
+                <p>There's no such component. A spelling error?</p>
+            </div>
     }
     
     return (

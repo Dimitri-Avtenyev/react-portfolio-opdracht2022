@@ -50,10 +50,8 @@ interface IPokemonDataContext {
 export const PokemonDataContext = React.createContext<IPokemonDataContext>({pokemon: [], currRoute: "", setCurrRoute: () => {}});
 
 const PokemonApp = () => {
-	const [pokemon, setPokemon] = useState<Pokemon[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [pokemonApi, setPokemonApi] = useState<PokemonApi[]>([]);
-
 	const [currRoute, setCurrRoute] = useState<string>("home");
 
 	let page = <Home/>;
