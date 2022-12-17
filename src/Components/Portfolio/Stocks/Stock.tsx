@@ -77,11 +77,9 @@ const Stock = (symbol: StockProps) => {
                     <span className={styles.priceStock}>{(parseFloat(stockData["Global Quote"]["05. price"])).toFixed(2)}</span>
                     <div className={styles.priceChange}>
                         <span className={positiveValue() ? styles.positiveValue : styles.negativeValue}>
-                            {positiveValue() ? <span>+</span> : <span>-</span>}
                             {parseFloat(stockData["Global Quote"]["09. change"]).toFixed(2)}
                         </span>
                         <span className={positiveValue() ? styles.positiveValue : styles.negativeValue}>
-                            {positiveValue() ? <span>+</span> : <span>-</span>}
                             {parseFloat(stockData["Global Quote"]["10. change percent"]).toFixed(2)}%
                         </span>
                     </div>
