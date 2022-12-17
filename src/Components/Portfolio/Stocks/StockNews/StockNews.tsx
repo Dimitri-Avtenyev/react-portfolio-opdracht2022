@@ -24,7 +24,7 @@ const StockNews = (stocks: NewsProps) => {
             setStockNews(data);
         })();
 
-    }, [])
+    }, []) // limited by calls per min 
 
     if (stockNews?.feed == undefined) {
         return <Triangle/>

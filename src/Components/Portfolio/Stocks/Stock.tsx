@@ -11,7 +11,7 @@ const loadingPlaceholder = () => {
     return (
         <div className={styles.containerPlaceholder}>
         <Triangle />
-        <p>loading...* call per min reached</p>
+        <p>loading...</p>
         <Card style={{ width: '100%' }}>
             <Card.Body>
                 <Placeholder animation="glow">
@@ -32,6 +32,7 @@ interface StockProps {
 const Stock = (symbol: StockProps) => {
     const [stockData, setStockData] = useState<StockData>();
     const [stockOverview, setStockOVerview] = useState<StockOverview>();
+
     //const [stockSearchData, setStockSearchData] = useState<StockSearchData>();
     let urlStock: string = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol.symbol}&apikey=${apiKey}`;
     let urlStockOverview = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol.symbol}&apikey=${apiKey}`;
@@ -40,8 +41,8 @@ const Stock = (symbol: StockProps) => {
     // *500 calls /day & 5 calls/min*
     useEffect(() => {
         const fetchStock = async () => {
-            let reponse = await fetch(urlStock);
-            let data: StockData = await reponse.json();
+            let response = await fetch(urlStock);
+            let data: StockData = await response.json();
             setStockData(data);
         }
         const fetchStockOverview = async () => {
@@ -53,7 +54,7 @@ const Stock = (symbol: StockProps) => {
         fetchStockOverview();
     }, []);
 
-    if (stockData?.["Global Quote"] === undefined || stockOverview === undefined) {
+    if (!stockData?.["Global Quote"] || !stockOverview) {
         return loadingPlaceholder();
     }
 

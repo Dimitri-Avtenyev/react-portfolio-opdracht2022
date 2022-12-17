@@ -6,18 +6,19 @@ import StockNews from "./StockNews/StockNews";
 
 const Stocks = () => {
     const [searchInput, setSearchInput] = useState<string>("");
-    const [stocks, setStocks] = useState<string[]>(["tsla"]);
-
+    const [stocks, setStocks] = useState<string[]>(["nflx"]);
+    
     const addStock = () => {
-        setStocks([searchInput, ...stocks]);
+        setStocks([...stocks, searchInput]);
     }
+
     return (
         <div className={styles.container}>
             <div className={styles.stocknews}>
                 <StockNews stocks={stocks}/>
             </div>
             <div>
-                <input onChange={(e) => {setSearchInput(e.target.value)}} value={searchInput} maxLength={10} placeholder="ticker symbol..."/>
+                <input onChange={(e) => {setSearchInput(e.target.value)}} value={searchInput} maxLength={10} placeholder="ticker symbol... e.g. TSLA"/>
                 <button onClick={() => {addStock()}}>Add</button>
             </div>
             {stocks.map((stock:string, index:number) => {
