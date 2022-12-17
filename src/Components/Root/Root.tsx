@@ -10,7 +10,7 @@ const Root = () => {
 	const {theme, setTheme} = useContext(ThemeContext);
 	
 	return (
-		<div className={styles.container}>
+		<div  style={switchTheme(theme)} className={styles.container}>
 			<div style={switchTheme(theme)} className={styles.navigation}>
 				<div>
 					<NavLink className={({ isActive }) => isActive ? styles.activeNavLink : styles.navLink} to="/">Home</NavLink>

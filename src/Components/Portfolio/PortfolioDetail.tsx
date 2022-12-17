@@ -1,5 +1,4 @@
 import { ComponentsContext } from 'Components/App/Context/ComponentsContext';
-import PageNotFound from 'Components/PageNotFound/PageNotFound';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './PortfolioPageDetail.module.css';

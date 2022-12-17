@@ -17,9 +17,9 @@ const Stocks = () => {
                 <button onClick={() => {addStock()}}>Add</button>
             </div>
             <Stock symbol="cldx"/>
-            {stocks.map((stock:string) => {
+            {stocks.map((stock:string, index:number) => {
                 return (
-                    <Stock symbol={stock}/>
+                    <Stock key={index} symbol={stock}/>
                 )
             })}
         </div>
