@@ -6,9 +6,11 @@
 }
 .linkToStyle {
    text-decoration: none;
-   border: 3px solid black;
    border-radius: 5px;
    padding: 5px;
+   color: rgb(0, 0, 0);
+   background-color: rgba(97, 97, 98, 0.185);
+   box-shadow: 0 1px 20px rgba(7, 14, 241, 0.529), 0 10px 12px rgba(0, 0, 0, 0.22);
 }
 .accorHeaderContents {
    display: flex;

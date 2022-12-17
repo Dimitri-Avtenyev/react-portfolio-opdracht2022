@@ -17,6 +17,9 @@ const Search = () => {
         const name_1:string = a.name;
         const name_2:string = b.name;
 
+        if (name_1 === "Stocks") { // just to showcase extra made component on top
+            return 0;
+        }
         if (name_1 > name_2) {
             return 1;
         }

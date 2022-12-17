@@ -27,7 +27,7 @@ const CounterList = () => {
                 
                 <div key={index} style={{display: "flex", flexDirection: "row", justifyContent:"space-between"}}>
                     <button style={{borderRadius: "20px"}} onClick={() => upTickCounter(index)}>Omhoog</button>
-                    <span style={{color: color}}>Count: {counter} </span> 
+                    <span style={{color: color, textAlign: "center"}}>Count: {counter} </span> 
                     <button style={{borderRadius: "20px"}} onClick={() => downTickCounter(index)}>Omlaag</button>
                 </div>
                 )

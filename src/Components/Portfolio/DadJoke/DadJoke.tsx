@@ -33,11 +33,6 @@ const DadJoke = () => {
         loadLocal();
     },[])
 
-    fetch('https://icanhazdadjoke.com/', {
-    headers: {
-        'Accept': 'application/json'
-    }
-});
     return (
         <div  style={{display: "block", padding: "2rem", border: "1px solid black", boxShadow:"1px 1px 1px 1px"}}>
             <div>
