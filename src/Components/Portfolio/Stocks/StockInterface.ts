@@ -55,3 +55,22 @@ export interface StockOverview {
     DividendDate:               Date,
     ExDividendDate:             Date,
 }
+
+export interface StockNewsData {
+    items:                      string,
+    sentiment_score_definition: string,
+    relevance_score_definition: string,
+    feed:                       StockNewsDataFeed[]
+}
+
+export interface StockNewsDataFeed {
+    title:                   string,
+    url:                     string,
+    time_published:          string,
+    authors:                 string[],
+    summary:                 string,
+    banner_image:            string,
+    source:                  string,
+    category_within_source:  string,
+    source_domain:           string
+}

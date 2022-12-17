@@ -7,6 +7,24 @@ import Card from "react-bootstrap/Card";
 
 const apiKey: string = "L35CSN0XTY7ZF";
 
+const loadingPlaceholder = () => {
+    return (
+        <div className={styles.containerPlaceholder}>
+        <Triangle />
+        <p>loading...* call per min reached</p>
+        <Card style={{ width: '100%' }}>
+            <Card.Body>
+                <Placeholder animation="glow">
+                    <div className={styles.containerPlaceholderHeader}>
+                    <Placeholder xs={4} /> <Placeholder xs={4}/>
+                    </div>
+                    <Placeholder xs={12} /> <Placeholder xs={12} />
+                </Placeholder>
+            </Card.Body>
+        </Card>
+    </div>
+    );
+}
 interface StockProps {
     symbol: string
 }
@@ -35,23 +53,8 @@ const Stock = (symbol: StockProps) => {
         fetchStockOverview();
     }, []);
 
-
     if (stockData?.["Global Quote"] === undefined || stockOverview === undefined) {
-        return (
-            <div className={styles.containerPlaceholder}>
-                <Triangle />
-                <Card style={{ width: '100%' }}>
-                    <Card.Body>
-                        <Placeholder animation="glow">
-                            <div className={styles.containerPlaceholderHeader}>
-                            <Placeholder xs={4} /> <Placeholder xs={4}/>
-                            </div>
-                            <Placeholder xs={12} /> <Placeholder xs={12} />
-                        </Placeholder>
-                    </Card.Body>
-                </Card>
-            </div>
-        );
+        return loadingPlaceholder();
     }
 
     let positiveValue = (): boolean => {
