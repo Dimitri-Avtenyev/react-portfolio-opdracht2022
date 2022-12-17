@@ -1,5 +1,4 @@
 import { ComponentsContext } from "Components/App/Context/ComponentsContext";
-import { ThemeContext } from "Components/App/Context/ThemeContext";
 import { useContext, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -14,6 +13,16 @@ const Search = () => {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
+    components.sort((a, b) => {
+        const name_1:string = a.name;
+        const name_2:string = b.name;
+
+        if (name_1 > name_2) {
+            return 1;
+        }
+        return 0;
+    });
+    
     return (
         <div className={styles.container}>
             <button className={styles.searchButton} onClick={() => handleShow()}><img src={searchIcon} alt="searchIcon" /></button>
@@ -27,7 +36,11 @@ const Search = () => {
                     </Modal.Title>
                 </Modal.Header>
                     <Modal.Body className={styles.modalBody}>
-                        {components.filter((component => component.name.toLowerCase().startsWith(search.toLowerCase()))).map((component, index) => {
+                        {components.filter(
+                            (component => component.name.toLowerCase()
+                            .startsWith(search.toLowerCase())))
+                            .map((component, index) => {
+
                             return (
                                 <Link key={index} to={`/portfolio/${component.name}`} className={styles.linkToStyle} onClick={handleClose}>{component.name}</Link>
                             )
